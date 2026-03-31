@@ -307,7 +307,7 @@
  
   <!-- shown when WS drops -->
   <div class="disc-banner" id="discBanner">
-    ⚠️ Disconnected from <code>ws://localhost:8080/chat</code> — retrying automatically…
+    ⚠️ Disconnected from <code>const WS_URL = window.location.hostname === "localhost"      ? "ws://localhost:8080/chat"      : "wss://chatbotbackend-production-0075.up.railway.app/chat";</code> — retrying automatically…
   </div>
  
   <div class="chat-area" id="chatArea">
@@ -350,7 +350,7 @@
    *  WebSocket URL — matches your WebSocketConfig:
    *  registry.addHandler(gemeniWebSocketHandler, "/chat")
    * ════════════════════════════════════════════════════════════ */
-  const WS_URL = "ws://localhost:8080/chat";
+  const WS_URL = "const WS_URL = window.location.hostname === "localhost"      ? "ws://localhost:8080/chat"      : "wss://chatbotbackend-production-0075.up.railway.app/chat";";
  
   /* ── DOM ── */
   const chatArea   = document.getElementById('chatArea');
