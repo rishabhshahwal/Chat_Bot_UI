@@ -350,7 +350,7 @@
    *  WebSocket URL — matches your WebSocketConfig:
    *  registry.addHandler(gemeniWebSocketHandler, "/chat")
    * ════════════════════════════════════════════════════════════ */
-  const WS_URL = "const WS_URL = window.location.hostname === "localhost"      ? "ws://localhost:8080/chat"      : "wss://chatbotbackend-production-0075.up.railway.app/chat";";
+  const WS_URL = window.location.hostname === "localhost"     ? "ws://localhost:8080/chat"     : "wss://chatbotbackend-production-0075.up.railway.app/chat"; = window.location.hostname === "localhost"      ? "ws://localhost:8080/chat"      : "wss://chatbotbackend-production-0075.up.railway.app/chat";";
  
   /* ── DOM ── */
   const chatArea   = document.getElementById('chatArea');
