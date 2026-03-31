@@ -36,30 +36,19 @@
     overflow: hidden;
   }
  
-  /* ══════════════════════════════
-     SIDEBAR
-  ══════════════════════════════ */
   .sidebar {
-    width: 230px;
-    flex-shrink: 0;
+    width: 230px; flex-shrink: 0;
     background: var(--sidebar-bg);
     border-right: 1px solid var(--border);
-    display: flex;
-    flex-direction: column;
-    padding: 24px 14px 18px;
-    gap: 18px;
+    display: flex; flex-direction: column;
+    padding: 24px 14px 18px; gap: 18px;
   }
- 
   .logo {
     font-family: 'Google Sans Display', sans-serif;
-    font-size: 19px;
-    font-weight: 700;
-    padding-left: 4px;
+    font-size: 19px; font-weight: 700; padding-left: 4px;
     background: linear-gradient(120deg, #fff 40%, var(--blue));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
   }
- 
   .new-chat-btn {
     display: flex; align-items: center; justify-content: center; gap: 8px;
     padding: 11px 14px; border: none; border-radius: 50px;
@@ -70,19 +59,16 @@
     box-shadow: 0 4px 18px #ff4fa330;
   }
   .new-chat-btn:hover { opacity: .88; transform: scale(1.02); }
- 
   .sidebar-label {
     font-size: 10px; font-weight: 700; text-transform: uppercase;
     letter-spacing: 1.2px; color: var(--muted); padding-left: 4px;
   }
- 
   .chat-history {
     display: flex; flex-direction: column; gap: 3px;
     overflow-y: auto; flex: 1;
   }
   .chat-history::-webkit-scrollbar { width: 3px; }
   .chat-history::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
- 
   .history-item {
     padding: 8px 10px; border-radius: 8px;
     font-size: 12.5px; color: var(--muted); cursor: pointer;
@@ -91,33 +77,26 @@
   }
   .history-item:hover { background: var(--chip-bg); color: var(--text); }
  
-  /* connection badge */
   .conn-badge {
     display: flex; align-items: center; gap: 8px;
     padding: 9px 10px; border-radius: 10px;
     background: var(--chip-bg); border: 1px solid var(--border);
-    font-size: 12px; color: var(--muted);
-    transition: all .3s;
+    font-size: 12px; color: var(--muted); transition: all .3s;
   }
   .conn-dot {
     width: 8px; height: 8px; border-radius: 50%;
     background: #444; flex-shrink: 0; transition: background .4s;
   }
-  .conn-dot.connected    { background: var(--green);  box-shadow: 0 0 7px var(--green); }
-  .conn-dot.connecting   { background: var(--warn);   animation: pulse 1s infinite; }
-  .conn-dot.disconnected { background: var(--error);  box-shadow: 0 0 7px var(--error); }
+  .conn-dot.connected    { background: var(--green); box-shadow: 0 0 7px var(--green); }
+  .conn-dot.connecting   { background: var(--warn);  animation: pulse 1s infinite; }
+  .conn-dot.disconnected { background: var(--error); box-shadow: 0 0 7px var(--error); }
   @keyframes pulse { 0%,100%{opacity:1}50%{opacity:.35} }
  
-  /* ══════════════════════════════
-     MAIN PANEL
-  ══════════════════════════════ */
   .main { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
  
-  /* topbar */
   .topbar {
     padding: 22px 36px 0;
-    display: flex; justify-content: flex-end; flex-direction: column;
-    align-items: flex-end; gap: 3px;
+    display: flex; flex-direction: column; align-items: flex-end; gap: 3px;
   }
   .topbar .greeting {
     font-family: 'Google Sans Display', sans-serif;
@@ -131,42 +110,30 @@
     -webkit-background-clip: text; -webkit-text-fill-color: transparent;
   }
  
-  /* disconnect banner */
   .disc-banner {
-    margin: 10px 36px 0;
-    padding: 10px 16px; border-radius: 10px;
+    margin: 10px 36px 0; padding: 10px 16px; border-radius: 10px;
     background: #160a00; border: 1px solid #5a2800;
     font-size: 12px; color: var(--warn);
     display: none; align-items: center; gap: 8px;
   }
-  .disc-banner code {
-    background: #2a1800; padding: 1px 6px;
-    border-radius: 4px; font-size: 11px;
-  }
  
-  /* chat area */
   .chat-area {
-    flex: 1; overflow-y: auto;
-    padding: 24px 36px;
-    display: flex; flex-direction: column; gap: 18px;
-    scroll-behavior: smooth;
+    flex: 1; overflow-y: auto; padding: 24px 36px;
+    display: flex; flex-direction: column; gap: 18px; scroll-behavior: smooth;
   }
   .chat-area::-webkit-scrollbar { width: 4px; }
   .chat-area::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
  
-  /* welcome card */
   .welcome-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    padding: 30px 26px 22px;
+    background: var(--card-bg); border: 1px solid var(--border);
+    border-radius: 20px; padding: 30px 26px 22px;
     max-width: 580px; align-self: center; width: 100%;
     animation: rise .55s cubic-bezier(.22,1,.36,1) both;
     box-shadow: 0 8px 40px #00000060;
   }
   @keyframes rise {
     from { opacity:0; transform:translateY(24px) scale(.98); }
-    to   { opacity:1; transform:translateY(0)    scale(1);   }
+    to   { opacity:1; transform:translateY(0) scale(1); }
   }
   .welcome-title { font-size: 17px; font-weight: 700; margin-bottom: 7px; }
   .welcome-sub   { font-size: 13px; color: var(--muted); margin-bottom: 18px; line-height: 1.5; }
@@ -179,12 +146,8 @@
     transition: background .15s, color .15s, border-color .15s, transform .12s;
     white-space: nowrap;
   }
-  .chip:hover {
-    background: var(--chip-hover); color: var(--text);
-    border-color: #3a3a4a; transform: translateY(-1px);
-  }
+  .chip:hover { background: var(--chip-hover); color: var(--text); border-color: #3a3a4a; transform: translateY(-1px); }
  
-  /* messages */
   .message {
     display: flex; flex-direction: column;
     max-width: 600px;
@@ -192,57 +155,38 @@
   }
   .message.user { align-self: flex-end; align-items: flex-end; }
   .message.ai   { align-self: flex-start; }
- 
   .msg-label { font-size: 11px; color: var(--muted); margin-bottom: 5px; padding: 0 4px; }
- 
   .bubble { padding: 13px 17px; border-radius: 20px; font-size: 14px; line-height: 1.65; }
- 
   .message.user .bubble {
     background: linear-gradient(140deg, #1a3558, #0c1f38);
-    border: 1px solid #243e6a;
-    border-bottom-right-radius: 5px;
-    color: #c8dfff;
+    border: 1px solid #243e6a; border-bottom-right-radius: 5px; color: #c8dfff;
   }
   .message.ai .bubble {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-bottom-left-radius: 5px;
+    background: var(--card-bg); border: 1px solid var(--border); border-bottom-left-radius: 5px;
   }
   .message.ai.err .bubble { border-color: var(--error); color: var(--error); }
  
-  /* typing */
   .typing-wrap {
     background: var(--card-bg); border: 1px solid var(--border);
     border-radius: 20px; border-bottom-left-radius: 5px;
     padding: 14px 18px; display: flex; gap: 6px; width: fit-content;
   }
   .typing-wrap span {
-    width: 7px; height: 7px; border-radius: 50%;
-    background: var(--muted); animation: blink 1.3s infinite;
+    width: 7px; height: 7px; border-radius: 50%; background: var(--muted);
+    animation: blink 1.3s infinite;
   }
   .typing-wrap span:nth-child(2) { animation-delay:.22s; }
   .typing-wrap span:nth-child(3) { animation-delay:.44s; }
   @keyframes blink { 0%,80%,100%{opacity:.25;transform:scale(.75)} 40%{opacity:1;transform:scale(1)} }
  
-  /* ── INPUT BAR ── */
-  .input-bar {
-    padding: 14px 36px 26px;
-    display: flex; align-items: center; gap: 10px;
-  }
- 
+  .input-bar { padding: 14px 36px 26px; display: flex; align-items: center; gap: 10px; }
   .input-wrap {
     flex: 1; display: flex; align-items: center;
-    background: var(--input-bg);
-    border: 1px solid var(--border);
-    border-radius: 50px;
-    padding: 0 8px 0 20px;
+    background: var(--input-bg); border: 1px solid var(--border);
+    border-radius: 50px; padding: 0 8px 0 20px;
     gap: 8px; transition: border-color .2s, box-shadow .2s;
   }
-  .input-wrap:focus-within {
-    border-color: #383848;
-    box-shadow: 0 0 0 3px #4facff18;
-  }
- 
+  .input-wrap:focus-within { border-color: #383848; box-shadow: 0 0 0 3px #4facff18; }
   #userInput {
     flex: 1; background: transparent; border: none; outline: none;
     color: var(--text); font-family: 'Google Sans', sans-serif;
@@ -250,21 +194,17 @@
   }
   #userInput::placeholder { color: var(--muted); }
   #userInput:disabled     { opacity: .45; cursor: not-allowed; }
- 
   .send-btn {
     width: 38px; height: 38px; border-radius: 50%;
     background: linear-gradient(135deg, var(--pink), var(--blue));
     border: none; cursor: pointer;
     display: flex; align-items: center; justify-content: center;
-    flex-shrink: 0;
-    transition: opacity .2s, transform .15s;
+    flex-shrink: 0; transition: opacity .2s, transform .15s;
     box-shadow: 0 2px 12px #4facff33;
   }
   .send-btn:hover    { opacity: .85; transform: scale(1.1); }
   .send-btn:disabled { opacity: .35; cursor: not-allowed; transform: none; box-shadow: none; }
   .send-btn svg { width: 17px; height: 17px; fill: #fff; }
- 
-  /* inline code in AI replies */
   .bubble code {
     background: #1e1e2a; padding: 2px 6px;
     border-radius: 5px; font-size: 12.5px; font-family: monospace;
@@ -273,10 +213,8 @@
 </head>
 <body>
  
-<!-- ══ SIDEBAR ══ -->
 <aside class="sidebar">
   <div class="logo">Gemini v2.0</div>
- 
   <button class="new-chat-btn" onclick="newChat()">
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
          stroke="currentColor" stroke-width="2.5"
@@ -286,28 +224,22 @@
     </svg>
     New Chat
   </button>
- 
   <span class="sidebar-label">Chat History</span>
   <div class="chat-history" id="chatHistory"></div>
- 
-  <!-- Live WS status badge -->
   <div class="conn-badge" id="connBadge">
     <div class="conn-dot connecting" id="connDot"></div>
     <span id="connLabel">Connecting…</span>
   </div>
 </aside>
  
-<!-- ══ MAIN ══ -->
 <main class="main">
- 
   <div class="topbar">
     <div class="greeting">Hello, Rishabh 👋</div>
     <div class="tagline">✦ Gemini is online</div>
   </div>
  
-  <!-- shown when WS drops -->
   <div class="disc-banner" id="discBanner">
-    ⚠️ Disconnected from <code>const WS_URL = window.location.hostname === "localhost"      ? "ws://localhost:8080/chat"      : "wss://chatbotbackend-production-0075.up.railway.app/chat";</code> — retrying automatically…
+    ⚠️ Disconnected — retrying automatically…
   </div>
  
   <div class="chat-area" id="chatArea">
@@ -330,29 +262,21 @@
  
   <div class="input-bar">
     <div class="input-wrap">
-      <input
-        type="text"
-        id="userInput"
-        placeholder="Ask Gemini…"
-        autocomplete="off"
-        onkeydown="if(event.key==='Enter' && !event.shiftKey) sendMessage()"
-      />
+      <input type="text" id="userInput" placeholder="Ask Gemini…" autocomplete="off"
+        onkeydown="if(event.key==='Enter' && !event.shiftKey) sendMessage()"/>
       <button class="send-btn" id="sendBtn" onclick="sendMessage()" title="Send">
         <svg viewBox="0 0 24 24"><path d="M2 21l21-9L2 3v7l15 2-15 2v7z"/></svg>
       </button>
     </div>
   </div>
- 
 </main>
  
 <script>
-  /* ════════════════════════════════════════════════════════════
-   *  WebSocket URL — matches your WebSocketConfig:
-   *  registry.addHandler(gemeniWebSocketHandler, "/chat")
-   * ════════════════════════════════════════════════════════════ */
-  const WS_URL = window.location.hostname === "localhost"     ? "ws://localhost:8080/chat"     : "wss://chatbotbackend-production-0075.up.railway.app/chat"; = window.location.hostname === "localhost"      ? "ws://localhost:8080/chat"      : "wss://chatbotbackend-production-0075.up.railway.app/chat";";
+  /* ── WebSocket URL ── */
+  const WS_URL = window.location.hostname === "localhost"
+    ? "ws://localhost:8080/chat"
+    : "wss://chatbotbackend-production-0075.up.railway.app/chat";
  
-  /* ── DOM ── */
   const chatArea   = document.getElementById('chatArea');
   const userInput  = document.getElementById('userInput');
   const sendBtn    = document.getElementById('sendBtn');
@@ -361,42 +285,26 @@
   const connLabel  = document.getElementById('connLabel');
   const discBanner = document.getElementById('discBanner');
  
-  let ws          = null;
-  let isLoading   = false;
-  let retryCount  = 0;
+  let ws = null, isLoading = false, retryCount = 0;
  
-  /* ════════════════════════════════════════════════════════════
-   *  WebSocket — connect + auto-reconnect
-   * ════════════════════════════════════════════════════════════ */
   function connect() {
     setStatus('connecting');
     ws = new WebSocket(WS_URL);
- 
-    ws.onopen = () => {
-      retryCount = 0;
-      setStatus('connected');
-      setLoading(false);
-    };
- 
-    /* ── Receive Gemini response ── */
+    ws.onopen = () => { retryCount = 0; setStatus('connected'); setLoading(false); };
     ws.onmessage = ({ data }) => {
       removeTyping();
       const reply = parseGeminiJSON(data);
-      const isErr = reply.startsWith('⚠️');
-      addMessage(reply, 'ai', isErr);
+      addMessage(reply, 'ai', reply.startsWith('⚠️'));
       setLoading(false);
     };
- 
-    ws.onerror = () => { /* onclose handles everything */ };
- 
+    ws.onerror = () => {};
     ws.onclose = () => {
       setStatus('disconnected');
       removeTyping();
       if (isLoading) {
-        addMessage('⚠️ Connection dropped before a response arrived. Please try again.', 'ai', true);
+        addMessage('⚠️ Connection dropped. Please try again.', 'ai', true);
         setLoading(false);
       }
-      // exponential back-off: 2 s → 4 s → 8 s … max 30 s
       const delay = Math.min(2000 * Math.pow(2, retryCount), 30000);
       retryCount++;
       setTimeout(connect, delay);
@@ -408,55 +316,34 @@
     connLabel.textContent =
       state === 'connected'  ? 'Connected to backend' :
       state === 'connecting' ? 'Connecting…' :
-      `Reconnecting… (attempt ${retryCount})`;
+      `Reconnecting… (${retryCount})`;
     discBanner.style.display = state === 'disconnected' ? 'flex' : 'none';
     if (state !== 'connected') setLoading(false);
   }
  
-  /* ════════════════════════════════════════════════════════════
-   *  Parse Gemini response
-   *
-   *  Your Spring handler forwards the raw Gemini JSON string:
-   *  {
-   *    "candidates": [{
-   *      "content": {
-   *        "parts": [{ "text": "THE REPLY" }]
-   *      }
-   *    }]
-   *  }
-   * ════════════════════════════════════════════════════════════ */
   function parseGeminiJSON(raw) {
     try {
       const json = JSON.parse(raw);
- 
       if (json.error)
         return `⚠️ Gemini API error: ${json.error.message ?? JSON.stringify(json.error)}`;
- 
       const text = json?.candidates?.[0]?.content?.parts?.[0]?.text;
       return text ? text.trim() : JSON.stringify(json, null, 2);
- 
-    } catch {
-      return raw; // plain text fallback
-    }
+    } catch { return raw; }
   }
  
-  /* ── Loading helpers ── */
   function setLoading(on) {
-    isLoading         = on;
+    isLoading = on;
     userInput.disabled = on;
     sendBtn.disabled   = on;
     if (!on) setTimeout(() => userInput.focus(), 50);
   }
  
-  /* ── Render helpers ── */
   function addMessage(text, role, isErr = false) {
     const wrap = document.createElement('div');
     wrap.className = `message ${role}${isErr ? ' err' : ''}`;
- 
     const lbl = document.createElement('div');
     lbl.className = 'msg-label';
     lbl.textContent = role === 'user' ? 'You' : 'Gemini';
- 
     const bub = document.createElement('div');
     bub.className = 'bubble';
     bub.innerHTML = String(text)
@@ -465,7 +352,6 @@
       .replace(/\*(.*?)\*/g,     '<em>$1</em>')
       .replace(/`([^`]+)`/g,     '<code>$1</code>')
       .replace(/\n/g,            '<br/>');
- 
     wrap.appendChild(lbl);
     wrap.appendChild(bub);
     chatArea.appendChild(wrap);
@@ -477,16 +363,12 @@
     const t = document.createElement('div');
     t.className = 'message ai'; t.id = 'typing';
     t.innerHTML = `<div class="msg-label">Gemini</div>
-      <div class="typing-wrap">
-        <span></span><span></span><span></span>
-      </div>`;
+      <div class="typing-wrap"><span></span><span></span><span></span></div>`;
     chatArea.appendChild(t);
     chatArea.scrollTop = chatArea.scrollHeight;
   }
  
-  function removeTyping() {
-    document.getElementById('typing')?.remove();
-  }
+  function removeTyping() { document.getElementById('typing')?.remove(); }
  
   function dismissWelcome() {
     const c = document.getElementById('welcomeCard');
@@ -503,27 +385,20 @@
     historyEl.prepend(item);
   }
  
-  /* ════════════════════════════════════════════════════════════
-   *  sendMessage — sends plain text over WebSocket
-   *  Your handler: message.getPayload()  ← receives this
-   * ════════════════════════════════════════════════════════════ */
   function sendMessage() {
     const text = userInput.value.trim();
     if (!text || isLoading) return;
- 
     if (!ws || ws.readyState !== WebSocket.OPEN) {
-      addMessage('⚠️ Not connected yet — please wait a moment and try again.', 'ai', true);
+      addMessage('⚠️ Not connected yet — please wait a moment.', 'ai', true);
       return;
     }
- 
     dismissWelcome();
     addMessage(text, 'user');
     addToHistory(text);
     userInput.value = '';
     setLoading(true);
     showTyping();
- 
-    ws.send(text); // → your handleTextMessage(session, message)
+    ws.send(text);
   }
  
   function quickSend(text) {
@@ -540,7 +415,7 @@
     card.innerHTML = `
       <div class="welcome-title">Welcome to Gemini AI Chat 👋</div>
       <div class="welcome-sub">Powered by Gemini Flash · Connected to your Spring Boot backend.<br/>
-        Ask me anything below or pick a quick action.</div>
+        Ask me anything or pick a quick action.</div>
       <div class="chips">
         <div class="chip" onclick="quickSend('Tell me a fun fact')">💡 Fun fact</div>
         <div class="chip" onclick="quickSend('What is the weather like today?')">🌤 Weather</div>
@@ -553,7 +428,6 @@
     userInput.focus();
   }
  
-  /* ── Boot ── */
   connect();
 </script>
 </body>
